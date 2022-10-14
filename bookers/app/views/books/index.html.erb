@@ -1,0 +1,15 @@
+<h1>投稿一覧</h1>
+ <span><%=link_to "back", "/books/new" %></span>
+<% @books.each do |book| %>
+  
+<h4>Title</h4>
+
+  <span><%= link_to book.title,book_path(book.id) %>
+  </span>
+  
+<h4>Body</h4>
+ <span><%= link_to book.body,book_path(book.id) %>
+  </span>
+   
+   
+<%end%>
